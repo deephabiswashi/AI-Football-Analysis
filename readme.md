@@ -60,7 +60,7 @@ source env1/bin/activate    # On Windows: env1\Scripts\activate</code></pre>
 </ol>
 <hr style="border: 1px solid #ccc; margin: 20px 0;" />
 <h2 style="color:#4169E1;">5. Screenshots</h2>
-<p>Below are example screenshots demonstrating various parts of the application. Ensure the images are stored in the <code>screenshots/</code> folder in the project root.</p>
+<p>Below are example screenshots demonstrating various parts of the application.</p>
 <ul>
   <li><strong>Homepage:</strong><br /><img src="screenshots/homepage.png" alt="Homepage" style="max-width:100%;"/></li>
   <li><strong>Results Page:</strong><br /><img src="screenshots/results-page.png" alt="Results Page" style="max-width:100%;"/></li>
