@@ -1,0 +1,106 @@
+/* Apply a vibrant gradient background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #66b7bb, #43a047);
+    color: #fff;
+}
+
+/* Centered container with a card-like appearance */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+/* Headings with a slight text-shadow */
+h1, h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Animated button with hover effect */
+button {
+    background-color: #00897b;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Input file style */
+input[type="file"] {
+    margin-top: 10px;
+    padding: 6px;
+    background: #fff;
+    color: #333;
+    border-radius: 6px;
+}
+
+/* 3D hover effect for containers or cards */
+.card-3d {
+    perspective: 1000px;
+    display: inline-block;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.card-3d-inner {
+    width: 300px;
+    height: 180px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    background: #fff;
+    border-radius: 8px;
+    color: #333;
+}
+
+.card-3d:hover .card-3d-inner {
+    transform: rotateY(180deg);
+}
+
+.card-3d-front,
+.card-3d-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-3d-front {
+    background-color: #4c53af;
+    color: #fff;
+}
+
+.card-3d-back {
+    background-color: #7d602e;
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+/* Video styling */
+video {
+    max-width: 100%;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+}

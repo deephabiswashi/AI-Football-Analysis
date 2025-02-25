@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Football Analysis System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Football Analysis System</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <label for="video">Upload a football match video:</label><br>
+            <input type="file" name="video" id="video" accept="video/*" required><br><br>
+            <button type="submit">Analyze Video</button>
+        </form>
+
+        <!-- 3D Card Example -->
+        <div class="card-3d">
+            <div class="card-3d-inner">
+                <div class="card-3d-front">
+                    <h3>Welcome!</h3>
+                </div>
+                <div class="card-3d-back">
+                    <h3>Get Started</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

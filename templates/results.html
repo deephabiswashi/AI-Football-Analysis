@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Analysis Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Analysis Results</h1>
+        <h2>LLM Classification</h2>
+        <p>{{ classification }}</p>
+        
+        <!-- Video Preview Section -->
+        <h2>Video Preview</h2>
+        <!-- 
+            Confirming the <video> tag is set up correctly:
+            1. 'controls' allows the user to play/pause the video.
+            2. <source src="{{ url_for('serve_video', filename=processed_video_filename) }}" type="video/mp4">
+               tells the browser the file is an MP4, matching your Flask endpoint's mimetype.
+            3. The fallback text is displayed if the browser does not support the video tag.
+        -->
+        <video id="processedVideo" controls>
+            <source src="{{ url_for('serve_video', filename=processed_video_filename) }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <!-- Download Button -->
+        <h2>Download Processed Video</h2>
+        <a href="{{ url_for('download_file', filename=processed_video_filename) }}">
+            <button>Download Video</button>
+        </a>
+        
+        <!-- Interactive Screenshot Capture -->
+        <h2>Capture Screenshot</h2>
+        <!-- Button for downloading screenshot locally -->
+        <button id="captureDownloadBtn">Download Screenshot</button>
+        <!-- Button for uploading screenshot to the server -->
+        <button id="captureUploadBtn">Upload Screenshot</button>
+        <canvas id="screenshotCanvas" width="640" height="360" style="display: none;"></canvas>
+    </div>
+    
+    <script>
+        // Get DOM elements
+        const video = document.getElementById('processedVideo');
+        const downloadBtn = document.getElementById('captureDownloadBtn');
+        const uploadBtn = document.getElementById('captureUploadBtn');
+        const canvas = document.getElementById('screenshotCanvas');
+        const context = canvas.getContext('2d');
+
+        // Function to capture current frame as data URL
+        function captureScreenshot() {
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+            return canvas.toDataURL('image/png');
+        }
+
+        // Option 1: Download the screenshot locally
+        downloadBtn.addEventListener('click', () => {
+            const dataURL = captureScreenshot();
+            const link = document.createElement('a');
+            link.href = dataURL;
+            link.download = 'screenshot.png';
+            link.click();
+        });
+
+        // Option 2: Upload the screenshot to the server
+        uploadBtn.addEventListener('click', () => {
+            const dataURL = captureScreenshot();
+            fetch('/upload_screenshot', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ imageData: dataURL })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message) {
+                    alert(data.message);
+                } else {
+                    alert('Error uploading screenshot.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error uploading screenshot.');
+            });
+        });
+    </script>
+</body>
+</html>
