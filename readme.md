@@ -64,9 +64,9 @@ source env1/bin/activate    # On Windows: env1\Scripts\activate</code></pre>
 <ul>
   <li><strong>Homepage:</strong><br /><img src="screenshots/homepage.png" alt="Homepage" style="max-width:100%;"/></li>
   <li><strong>Results Page:</strong><br /><img src="screenshots/results-page.png" alt="Results Page" style="max-width:100%;"/></li>
-  <li><strong>Input Video Sample 1:</strong><br /><img src="screenshots/input_video1.png" alt="Input Video 1" style="max-width:100%;"/></li>
-  <li><strong>Input Video Sample 2:</strong><br /><img src="screenshots/input_video2.png" alt="Input Video 2" style="max-width:100%;"/></li>
-  <li><strong>Input Video Sample 3:</strong><br /><img src="screenshots/input_video3.png" alt="Input Video 3" style="max-width:100%;"/></li>
+  <li><strong>Input Video Sample 1:</strong><br /><img src="screenshots/input_video 1.png" alt="Input Video 1" style="max-width:100%;"/></li>
+  <li><strong>Input Video Sample 2:</strong><br /><img src="screenshots/input_video 2.png" alt="Input Video 2" style="max-width:100%;"/></li>
+  <li><strong>Input Video Sample 3:</strong><br /><img src="screenshots/input_video 3.png" alt="Input Video 3" style="max-width:100%;"/></li>
 </ul>
 <hr style="border: 1px solid #ccc; margin: 20px 0;" />
 <h2 style="color:#4169E1;">6. Video Demo</h2>
