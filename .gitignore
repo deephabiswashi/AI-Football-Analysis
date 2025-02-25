@@ -1,0 +1,25 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+env*/
+venv/
+.venv/
+
+# macOS specific
+.DS_Store
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Model weights (optional - uncomment if you don't want to commit large model files
+models/*.pt
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VSCode settings (optional)
+.vscode/
