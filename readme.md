@@ -69,16 +69,12 @@ source env1/bin/activate    # On Windows: env1\Scripts\activate</code></pre>
   <li><strong>Input Video Sample 3:</strong><br /><img src="screenshots/input_video 3.png" alt="Input Video 3" style="max-width:100%;"/></li>
 </ul>
 <hr style="border: 1px solid #ccc; margin: 20px 0;" />
-<h2 style="color:#4169E1;">6. Video Demo</h2>
-<p>Watch the processed video demo by clicking the link below:</p>
+<h2 style="color:#4169E1;">6. Video Demos</h2>
+<p>You can watch the processed videos on YouTube:</p>
 <ul>
-  <li><a href="outputs/processed_video1.mp4" target="_blank">Processed Video Demo 1</a></li>
-</ul>
-<ul>
-  <li><a href="outputs/processed_video2.mp4" target="_blank">Processed Video Demo 2</a></li>
-</ul>
-<ul>
-  <li><a href="outputs/processed_video3.mp4" target="_blank">Processed Video Demo 3</a></li>
+  <li><a href="https://youtu.be/7chU45KjyK0?si=lo0a9i4d_wwN5rHJ" target="_blank">Video Demo 1</a></li>
+  <li><a href="https://youtu.be/5dTSGepYvTc?si=8ZiMFFm2ZWX2y2cY" target="_blank">Video Demo 2</a></li>
+  <li><a href="https://youtu.be/HQHIYtn9HG4?si=rARhE5mMlBkEMpDC" target="_blank">Video Demo 3</a></li>
 </ul>
 <hr style="border: 1px solid #ccc; margin: 20px 0;" />
 <h2 style="color:#4169E1;">7. Contributing</h2>
